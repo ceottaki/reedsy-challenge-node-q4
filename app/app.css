@@ -1,0 +1,17 @@
+/* app css stylesheet */
+
+.table img.book-cover {
+  height: 120px;
+}
+
+.table .book-cover-column {
+  width: 110px;
+}
+
+.table .book-title {
+  font-weight: bold;
+}
+
+.table-striped-two-rows tbody tr:nth-of-type(4n + 1), .table-striped-two-rows tbody tr:nth-of-type(4n + 2) {
+  background-color: rgba(0,0,0,.05);
+}
