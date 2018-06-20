@@ -1,9 +1,9 @@
 {
-  "name": "angular-seed",
-  "description": "A starter project for AngularJS",
-  "version": "0.0.0",
-  "homepage": "https://github.com/angular/angular-seed",
-  "license": "MIT",
+  "name": "reedsy-challenge-node-q4",
+  "description": "Answer to question 4 of the challenge described in https://github.com/reedsy/challenges/blob/master/node-fullstack.md",
+  "version": "0.0.1",
+  "homepage": "https://github.com/ceottaki/reedsy-challenge-node-q4",
+  "license": "UNLICENSED",
   "private": true,
   "dependencies": {
     "angular": "~1.5.0",

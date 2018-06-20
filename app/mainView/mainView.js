@@ -18,8 +18,12 @@ angular.module('myApp.mainView', ['ngRoute'])
         $scope.descriptionBookId = -1;
 
         $scope.moveToPage = function (newPage) {
+            if (newPage < 1 || newPage > $scope.numPages) {
+                return;
+            }
+
             $scope.page = newPage;
-        }
+        };
 
         $scope.toggleDescription = function (bookId) {
             if ($scope.descriptionBookId === bookId) {
@@ -27,11 +31,15 @@ angular.module('myApp.mainView', ['ngRoute'])
             } else {
                 $scope.descriptionBookId = bookId;
             }
-        }
+        };
 
-        bookService.fetchBooks().then(function (books) {
-            $scope.books = books;
-            $scope.numPages = Math.ceil(books.length / $scope.pageSize);
-            $scope.pageNumArray = new Array($scope.numPages);
-        });
+        $scope.fetchBooks = function () {
+            bookService.fetchBooks().then(function (books) {
+                $scope.books = books;
+                $scope.numPages = Math.ceil(books.length / $scope.pageSize);
+                $scope.pageNumArray = new Array($scope.numPages);
+            });
+        };
+
+        $scope.fetchBooks();
     }]);

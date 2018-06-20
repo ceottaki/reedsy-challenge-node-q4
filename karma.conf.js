@@ -1,5 +1,5 @@
 //jshint strict: false
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
 
     basePath: './app',
@@ -8,8 +8,10 @@ module.exports = function(config) {
       'bower_components/angular/angular.js',
       'bower_components/angular-route/angular-route.js',
       'bower_components/angular-mocks/angular-mocks.js',
+      'app.js',
+      'bookService.js',
       'components/**/*.js',
-      'view*/**/*.js'
+      'mainView/**/*.js'
     ],
 
     autoWatch: true,
@@ -29,6 +31,5 @@ module.exports = function(config) {
       outputFile: 'test_out/unit.xml',
       suite: 'unit'
     }
-
   });
 };
