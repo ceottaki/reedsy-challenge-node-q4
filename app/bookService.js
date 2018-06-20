@@ -12,6 +12,9 @@ angular.module('myApp')
             $http.get('assets/books.json').then(function (response) {
                 self.books = response.data.books;
                 deferred.resolve(self.books);
+            }).catch(function (error) {
+                console.error(error);
+                deferred.reject(error);
             });
 
             return deferred.promise;
