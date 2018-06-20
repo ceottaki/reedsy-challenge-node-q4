@@ -14,7 +14,7 @@
             </tr>
             <tr ng-repeat-end class="collapse" ng-class="{'show': descriptionBookId === book.id}" ng-attr-id="'book-description-' + book.id">
                 <td colspan="5">
-                    {{book.description}}
+                    <span markdown-to-html="book.description"></span>
                 </td>
             </tr>
         </tbody>

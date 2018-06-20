@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.mainView', ['ngRoute'])
+angular.module('myApp.mainView', ['ngRoute', 'ng-showdown'])
 
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/main', {
