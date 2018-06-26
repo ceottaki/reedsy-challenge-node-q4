@@ -45,15 +45,15 @@ describe('myApp.mainView module', function () {
         it('should set the id of the description being displayed to the correct book', function () {
             deferredFetchBooks.resolve(books);
             $scope.$apply();
-            $scope.toggleDescription(4);
+            $scope.toggleDescription(null, 4);
             expect($scope.descriptionBookId).toBe(4);
         });
 
         it('should unset the id of the description being displayed when toggling the same book', function () {
             deferredFetchBooks.resolve(books);
             $scope.$apply();
-            $scope.toggleDescription(4);
-            $scope.toggleDescription(4);
+            $scope.toggleDescription(null, 4);
+            $scope.toggleDescription(null, 4);
             expect($scope.descriptionBookId).toBeUndefined();
         });
 

@@ -26,7 +26,7 @@ angular.module('myApp.mainView', ['ngRoute', 'ng-showdown'])
         };
 
         $scope.toggleDescription = function ($event, bookId) {
-            if ($event.target.href) {
+            if ($event && $event.target && $event.target.href) {
                 // Prevents elements with external links from toggling the description.
                 return;
             }
