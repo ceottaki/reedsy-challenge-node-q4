@@ -15,7 +15,7 @@ angular.module('myApp.mainView', ['ngRoute', 'ng-showdown'])
         $scope.books = [];
         $scope.numPages = 0;
         $scope.pageNumArray = [];
-        $scope.descriptionBookId = -1;
+        $scope.descriptionBookId = undefined;
 
         $scope.moveToPage = function (newPage) {
             if (newPage < 1 || newPage > $scope.numPages) {
@@ -27,7 +27,7 @@ angular.module('myApp.mainView', ['ngRoute', 'ng-showdown'])
 
         $scope.toggleDescription = function (bookId) {
             if ($scope.descriptionBookId === bookId) {
-                $scope.descriptionBookId = -1;
+                $scope.descriptionBookId = undefined;
             } else {
                 $scope.descriptionBookId = bookId;
             }

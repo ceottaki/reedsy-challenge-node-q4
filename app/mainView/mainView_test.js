@@ -54,7 +54,7 @@ describe('myApp.mainView module', function () {
             $scope.$apply();
             $scope.toggleDescription(4);
             $scope.toggleDescription(4);
-            expect($scope.descriptionBookId).toBe(-1);
+            expect($scope.descriptionBookId).toBeUndefined();
         });
 
         it('should not update the page when moving to a page smaller than 1', function () {
