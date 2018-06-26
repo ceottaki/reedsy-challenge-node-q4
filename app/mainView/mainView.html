@@ -10,18 +10,19 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat-start="book in books | limitTo : pageSize : (page - 1) * pageSize track by book.id" book-row book="book" ng-click="toggleDescription(book.id);">
+            <tr ng-repeat-start="book in books | limitTo : pageSize : (page - 1) * pageSize track by book.id" book-row book="book" ng-click="toggleDescription($event, book.id);"
+                class="clickable">
             </tr>
             <tr ng-repeat-end class="collapse" ng-class="{'show': descriptionBookId !== undefined && descriptionBookId === book.id}"
                 ng-attr-id="'book-description-' + book.id">
-                <td colspan="5">
+                <td colspan="5" class="no-top-border">
                     <span markdown-to-html="book.description"></span>
                 </td>
             </tr>
         </tbody>
     </table>
     <nav aria-label="Book table page navigation">
-        <ul class="pagination">
+        <ul class="pagination justify-content-center">
             <li class="page-item" ng-class="{'disabled': page === 1}">
                 <a class="page-link" aria-label="Previous" ng-click="moveToPage(page - 1);">
                     <span aria-hidden="true">&laquo;</span>

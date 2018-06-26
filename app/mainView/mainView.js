@@ -25,7 +25,12 @@ angular.module('myApp.mainView', ['ngRoute', 'ng-showdown'])
             $scope.page = newPage;
         };
 
-        $scope.toggleDescription = function (bookId) {
+        $scope.toggleDescription = function ($event, bookId) {
+            if ($event.target.href) {
+                // Prevents elements with external links from toggling the description.
+                return;
+            }
+
             if ($scope.descriptionBookId === bookId) {
                 $scope.descriptionBookId = undefined;
             } else {

@@ -12,6 +12,19 @@
   font-weight: bold;
 }
 
-.table-striped-two-rows tbody tr:nth-of-type(4n + 1), .table-striped-two-rows tbody tr:nth-of-type(4n + 2) {
-  background-color: rgba(0,0,0,.05);
+.table-striped-two-rows tbody tr:nth-of-type(4n + 1),
+.table-striped-two-rows tbody tr:nth-of-type(4n + 2) {
+  background-color: rgba(0, 0, 0, .05);
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.table td.no-top-border {
+  border-top: none;
+}
+
+.book-buy-link>a {
+  color: #C1D58F;
 }
